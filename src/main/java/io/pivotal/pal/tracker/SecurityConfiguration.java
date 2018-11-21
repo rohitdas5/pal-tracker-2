@@ -24,12 +24,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             http.requiresChannel().anyRequest().requiresSecure();
         }
 
-<<<<<<< HEAD
         http.authorizeRequests()
-=======
-        http
-            .authorizeRequests()
->>>>>>> aefbc77... Enable security
             .antMatchers("/**").hasRole("USER")
             .and()
             .httpBasic()
@@ -40,17 +35,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-<<<<<<< HEAD
         auth.inMemoryAuthentication()
             .withUser("user")
             .password(encoder.encode("password"))
             .roles("USER");
-=======
-        auth
-            .inMemoryAuthentication()
-                .withUser("user")
-                .password(encoder.encode("password"))
-                .roles("USER");
->>>>>>> aefbc77... Enable security
     }
 }
