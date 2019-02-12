@@ -5,5 +5,5 @@ applications:
   routes:
   - route: pal-tracker-puttaraju.cfapps.io
   env:
-    WELCOME_MESSAGE: Hello from the review2 environment s
+    WELCOME_MESSAGE: Hello from the review environment
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
