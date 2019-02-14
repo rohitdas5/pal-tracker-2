@@ -22,10 +22,7 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository{
     }
 
    public TimeEntry create (TimeEntry timeEntry) {
-/*       final String updateSql = "INSERT INTO time_entries (project_id, user_id, date, hours) VALUES (?, ?, ?, ?)";
-       int timeEntryId= jdbcTemplate.update(updateSql,
-                timeEntry.getProjectId(),timeEntry.getUserId(),timeEntry.getDate(),timeEntry.getHours());
-        return find(((long)timeEntryId));*/
+
        KeyHolder generatedKeyHolder = new GeneratedKeyHolder();
 
        jdbcTemplate.update(connection -> {
